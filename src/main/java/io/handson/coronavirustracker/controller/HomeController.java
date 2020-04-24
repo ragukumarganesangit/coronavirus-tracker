@@ -15,7 +15,7 @@ public class HomeController {
     @Autowired
     CoronaVirusDataService coronaVirusDataService;
 
-    @GetMapping("/ragu")
+    @GetMapping("/")
     public String home(Model model){
         List<LocationStats> allStats = coronaVirusDataService.getAllStats();
         int totalReportedCases = allStats.stream().mapToInt(S -> S.getLatestTotalCases()).sum();
