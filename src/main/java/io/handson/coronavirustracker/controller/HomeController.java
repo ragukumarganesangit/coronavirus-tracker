@@ -23,6 +23,8 @@ public class HomeController {
         model.addAttribute("locationstats", coronaVirusDataService.getAllStats());
         model.addAttribute("totalReportedCases", totalReportedCases);
         model.addAttribute("totalNewCases", totalNewCases);
+        model.addAttribute("totalBelgiumCases" , coronaVirusDataService.getBelgiumCases() );
+        model.addAttribute("totalIndiaCases" , coronaVirusDataService.getIndiaCases() );
         return "home";
     }
 }

@@ -14,17 +14,29 @@
 <h1>Coronavirus Tracker Application</h1>
 <p>This application lists the current number of cases reported across globe</p>
 
-
-<div class="jumbotron">
+<div class="p-3 mb-2 bg-secondary text-white" >
+    World Wide:
     <h1 class="display-4" th:text="${totalReportedCases}"></h1>
     <p class="lead">Total cases reported as of Today</p>
     <hr class="my-4">
     <p>
-    <span>New cases Reported since previous Day</span>
+    <span>New cases Reported since previous Day in Whole World</span>
     <span th:text="${totalNewCases}"></span>
     </p>
 </div>
+    <div class="p-3 mb-2 bg-danger text-white" >
+    Namma Area:
+    <P>
+    <span>Total Reported cases in India</span>
+    <span th:text="${totalIndiaCases}"></span>
+    </P>
+    <P>
+    <span>Total Reported cases in Belgium</span>
+    <span th:text="${totalBelgiumCases}"></span>
+    </P>
+    </div>
 
+    <div class="p-3 mb-2 bg-primary text-white" >
 <table class="table">
     <tr>
         <th>State</th>
@@ -39,6 +51,7 @@
         <td th:text="${locationstat.getDifferenceFromPrevious()}">0</td>
     </tr>
 </table>
+    </div>
 </div>
 </body>
 
